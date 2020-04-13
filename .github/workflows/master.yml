@@ -11,5 +11,6 @@ jobs:
         uses: navikt/pam-generate-release-action@v1
         with:
           token:  ${{ secrets.GITHUB_TOKEN }}
+          cmd: "--header-label '' --exclude-labels 'status: stale,closed: notabug,closed: duplicate,closed: question,closed: invalid,closed: won't fix' --usernames-as-github-logins"
       - name: Output changelog
         run: cat CHANGELOG.md
