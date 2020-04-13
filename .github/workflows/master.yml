@@ -11,5 +11,6 @@ jobs:
         uses: navikt/pam-generate-release-action@v1
         with:
           token:  ${{ secrets.GITHUB_TOKEN }}
+          cmd: "--header-label '' --"
       - name: Output changelog
         run: cat CHANGELOG.md
