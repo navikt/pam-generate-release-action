@@ -1,0 +1,15 @@
+name: "Changelog generator"
+description: "Using GitHub api to generate change log between tags or releases"
+inputs:
+  token:
+    description: "GitHub token"
+    required: false
+  cmd:
+    description: "Commands to pass to generate change log script"
+    required: false
+outputs:
+  changelog:
+    description: "Contents of generated change log."
+runs:
+  using: "docker"
+  image: "Dockerfile"
