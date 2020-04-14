@@ -7,6 +7,7 @@ for generating changelog between releases/tags.
 ```
 
 steps:
+  - uses: actions/checkout@v1
   - name: generate changelog action
     uses: navikt/pam-generate-release-action@v1.1
     with:
