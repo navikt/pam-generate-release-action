@@ -8,12 +8,11 @@ for generating changelog between releases/tags.
 
 steps:
   - name: generate changelog action
-    uses: navikt/pam-generate-release-action@v1
-    env:
-      sinceTag: v1
+    uses: navikt/pam-generate-release-action@v1.1
     with:
       token:  ${{ secrets.GITHUB_TOKEN }}
-      cmd: "--since-tag ${{ env.sinceTag }} --usernames-as-github-logins"
+      useLatestReleaseTag: true
+      cmd: "--usernames-as-github-logins"
   - name: Output changelog
     run: cat CHANGELOG.md
 
