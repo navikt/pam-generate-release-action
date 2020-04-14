@@ -7,6 +7,9 @@ inputs:
   cmd:
     description: "Commands to pass to generate change log script"
     required: false
+  useLatestReleaseTag:
+    description: "set to true if you want to generate since latest release tag"
+    required: false
 outputs:
   changelog:
     description: "Contents of generated change log."
