@@ -14,7 +14,9 @@ steps:
     with:
       token:  ${{ secrets.GITHUB_TOKEN }}
       cmd: "--since-tag ${{ env.sinceTag }} --usernames-as-github-logins"
+  - name: Output changelog
+    run: cat CHANGELOG.md
 
 ```
 
-The field **cmd** is where you pass the parameters to the script, you can find all supported parameters [here](https://github.com/github-changelog-generator/github-changelog-generator/wiki/Advanced-change-log-generation-examples) 
+The field **cmd** is where you pass the parameters to the script, you can find all supported parameters [here](https://github.com/github-changelog-generator/github-changelog-generator/wiki/Advanced-change-log-generation-examples). The script save the changelogs to a file CHANGELOG.md.
