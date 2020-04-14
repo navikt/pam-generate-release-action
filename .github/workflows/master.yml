@@ -12,6 +12,6 @@ jobs:
         with:
           token:  ${{ secrets.GITHUB_TOKEN }}
           useLatestReleaseTag: true
-          cmd: "--header-label   --usernames-as-github-logins"
+          cmd: "--usernames-as-github-logins"
       - name: Output changelog
         run: cat CHANGELOG.md
