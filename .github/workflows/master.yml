@@ -12,6 +12,6 @@ jobs:
         with:
           token:  ${{ secrets.GITHUB_TOKEN }}
           useLatestReleaseTag: true
-          cmd: "--header-label   --exclude-labels 'status: stale,closed: notabug,closed: duplicate,closed: question,closed: invalid,closed: won't fix' --usernames-as-github-logins"
+          cmd: "--header-label   --usernames-as-github-logins"
       - name: Output changelog
         run: cat CHANGELOG.md
