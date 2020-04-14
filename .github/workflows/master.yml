@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test action
-        uses: navikt/pam-generate-release-action@v1.1
+        uses: navikt/pam-generate-release-action@v1.2
         with:
           token:  ${{ secrets.GITHUB_TOKEN }}
           useLatestReleaseTag: true
